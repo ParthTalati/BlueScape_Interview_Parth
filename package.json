@@ -1,0 +1,25 @@
+{
+  "name": "BlueScape_Interview_Parth",
+  "version": "1.0.0",
+  "description": "Code for testing the contact page for interview website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParthTalati/BlueScape_Interview_Parth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ParthTalati/BlueScape_Interview_Parth/issues"
+  },
+  "homepage": "https://github.com/ParthTalati/BlueScape_Interview_Parth#readme",
+  "devDependencies": {
+    "codeceptjs": "^2.6.5",
+    "mochawesome": "^6.1.1",
+    "puppeteer": "^3.1.0"
+  }
+}
