@@ -7,11 +7,12 @@ setHeadlessWhen(process.env.HEADLESS);
 exports.config = {
   tests: './*_test.js',
   output: './output',
-//  multiple: {
-//    smoke: {
-//        browsers: ["chrome", "firefox"]
-//    }
-//  },
+/* For running tests on multiple browsers, enable this block of code
+  multiple: {
+    smoke: {
+        browsers: ["chrome", "firefox"]
+    }
+  }, */
   helpers: {
     Puppeteer: {
       url: 'https://bluescapeqainterview.wordpress.com',
