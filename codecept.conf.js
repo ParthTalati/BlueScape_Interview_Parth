@@ -19,12 +19,13 @@ exports.config = {
       show: true,
       restart: false,
       windowSize: '1000x700',
-      waitForNavigation: 'domcontentloaded',
+      waitForNavigation: [ "domcontentloaded", "networkidle0" ],
       waitForAction: 500,
     }
   },
   include: {
-    I: './steps_file.js'
+    contactPage: './pages/contactsPage.js',
+    formSubmittedPage: './pages/formSubmittedPage.js'
   },
   bootstrap: null,
   mocha: {},
