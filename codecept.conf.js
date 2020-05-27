@@ -12,7 +12,7 @@ exports.config = {
     smoke: {
         browsers: ["chrome", "firefox"]
     }
-  }, */
+  },*/
   helpers: {
     Puppeteer: {
       url: 'https://bluescapeqainterview.wordpress.com',
