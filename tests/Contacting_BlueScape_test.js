@@ -6,4 +6,5 @@ Scenario('Test Page load', (I) => {
     I.fillField('Name', 'Parth');
     I.fillField('Email', 'Parth@parth.com');
     I.click("//input[@name='g7-date']");
+    I.clickDateOnDatePicker()
 });

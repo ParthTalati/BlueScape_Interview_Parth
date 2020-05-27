@@ -8,3 +8,15 @@ module.exports = function() {
 
   });
 }
+/*
+
+public function clickDateOnDatePicker($date)
+    {
+        list($month, $day, $year) = explode('/', $date);
+        $element = sprintf("//input[@name='g7-date']", $month - 1, $year, ltrim($day, '0'));
+        $this->clickElement($element);
+        $this->waitForElementNotVisible($element);
+        return $this;
+    }
+
+*/
