@@ -17,8 +17,10 @@ exports.config = {
     Puppeteer: {
       url: 'https://bluescapeqainterview.wordpress.com',
       show: true,
+      restart: false,
       windowSize: '1000x700',
-      waitForNavigation: 'networkidle0'
+      waitForNavigation: 'domcontentloaded',
+      waitForAction: 500,
     }
   },
   include: {
