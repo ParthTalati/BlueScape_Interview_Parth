@@ -5,7 +5,7 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-  tests: './*_test.js',
+  tests: './tests/*_test.js',
   output: './output',
 /* For running tests on multiple browsers, enable this block of code
   multiple: {
@@ -17,7 +17,7 @@ exports.config = {
     Puppeteer: {
       url: 'https://bluescapeqainterview.wordpress.com',
       show: true,
-      windowSize: '1200x900',
+      windowSize: '1000x700',
       waitForNavigation: 'networkidle0'
     }
   },
