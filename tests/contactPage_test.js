@@ -4,6 +4,15 @@ Before(async (I) => {
     I.amOnPage('/contact/');
 });
 
+let incorrectDataSet = new DataTable(['name', 'email', 'website']);
+incorrectDataSet.add([' ', 'john@john.com', ' ']);
+incorrectDataSet.add(['John', 'john@john', 'https://www.bluescape.com']);
+incorrectDataSet.add(['John', 'john@john.com', 'bluescape.com']);
+
+let blankDataSet = new DataTable(['name', 'email', 'website']);
+blankDataSet.add([' ', 'john@john.com', 'https://www.bluescape.com'])
+blankDataSet.add(['John', '', 'https://www.bluescape.com'])
+
 Scenario('Test Page load', (I, contactPage) => {
     I.seeElement(contactPage.nameField);
 
@@ -23,16 +32,16 @@ Scenario('Positive path', (I, contactPage, formSubmittedPage) => {
 //
 //});
 //
-//scenario('Keeping any of required fields blank gives error', (I) =>{
+//Data(incorrectDataSet).only.scenario('Incorrect values give error', (I, current) =>{
 //    I.amOnPage('/contact')
-//    I.fillField('Email', 'Parth@parth.com');
+//    I.fillField('Email', current.email);
 //    I.click("Date", "div#contact-form-7");
 //    I.click({xpath: "//table[@class='ui-datepicker-calendar']//a[contains(@class,'ui-state-highlight')]"});
 //    I.click("Submit", "button");
 //    I.see('')
 //});
 //
-//scenario('Incorrect email address format gives error', (I) =>{
+//scenario('Keeping required fields blank gives error', (I) =>{
 //    I.amOnPage('/contact')
 //    I.fillField('Email', 'Parth@parth.com');
 //    I.click("Date", "div#contact-form-7");
