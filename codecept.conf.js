@@ -1,4 +1,5 @@
 const { setHeadlessWhen } = require('@codeceptjs/configure');
+require('import-export');
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // HEADLESS=true npx codecept run
@@ -24,7 +25,7 @@ exports.config = {
     }
   },
   include: {
-    contactPage: './pages/contactsPage.js',
+    contactPage: './pages/contactPage.js',
     formSubmittedPage: './pages/formSubmittedPage.js'
   },
   bootstrap: null,
