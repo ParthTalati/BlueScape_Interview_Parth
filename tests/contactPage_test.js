@@ -1,11 +1,9 @@
-import contactPage from 'contactPage.js'
-import formSubmittedPage from 'formSubmittedPage.js'
 
 Feature('Contacting BlueScape');
 
-//Before(async (I) => {
-//    I.amOnPage('/contact/');
-//});
+Before(async (I) => {
+    I.amOnPage('contact');
+});
 
 let incorrectDataSet = new DataTable(['name', 'email', 'website']);
 incorrectDataSet.add([' ', 'john@john.com', ' ']);
@@ -17,15 +15,14 @@ blankDataSet.add([' ', 'john@john.com', 'https://www.bluescape.com'])
 blankDataSet.add(['John', '', 'https://www.bluescape.com'])
 
 Scenario('Test Page load', (I, contactPage) => {
-    I.amOnPage('/contact/');
+    I.amOnPage('contact');
     I.seeElement(contactPage.nameField);
 
 });
 
-Scenario('Positive path', async(I, contactPage, formSubmittedPage) => {
-    I.amOnPage('/contact/');
+Scenario('Positive path',async (I, contactPage) => {
     contactPage.insertCorrectData();
-    I.seeElement(formSubmittedPage.messageSentText)
+    //I.seeElement(formSubmittedPage.messageSentText);
 
 });
 //

@@ -16,17 +16,18 @@ exports.config = {
   },*/
   helpers: {
     Puppeteer: {
-      url: 'https://bluescapeqainterview.wordpress.com',
+      url: 'https://bluescapeqainterview.wordpress.com/',
       show: true,
       restart: false,
       windowSize: '1000x700',
       waitForNavigation: [ "domcontentloaded", "networkidle0" ],
       waitForAction: 500,
+      waitForTimeout: 3000,
     }
   },
   include: {
-    contactPage: './pages/contactPage.js',
-    formSubmittedPage: './pages/formSubmittedPage.js'
+    contactPage: './tests/pages/contactPage.js',
+    formSubmittedPage: './tests/pages/formSubmittedPage.js'
   },
   bootstrap: null,
   mocha: {},
