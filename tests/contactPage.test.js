@@ -1,3 +1,5 @@
+const { I, ContactPage, FormSubmittedPage } = inject();
+
 
 Feature('Contacting BlueScape');
 
@@ -14,18 +16,16 @@ let blankDataSet = new DataTable(['name', 'email', 'website']);
 blankDataSet.add([' ', 'john@john.com', 'https://www.bluescape.com'])
 blankDataSet.add(['John', '', 'https://www.bluescape.com'])
 
-Scenario('Test Page load', (I, contactPage) => {
-    I.amOnPage('contact');
-    I.seeElement(contactPage.nameField);
+Scenario('Test Page load', async() => {
+    I.seeElement(ContactPage.nameField);
 
 });
 
-Scenario('Positive path',async (I, contactPage) => {
-    contactPage.insertCorrectData();
-    //I.seeElement(formSubmittedPage.messageSentText);
-
+Scenario('Positive path', async () => {
+   await ContactPage.insertCorrectData();
+   I.seeElement(FormSubmittedPage.messageSentText);
 });
-//
+
 //scenario('All four fields present in the form', (I) =>{
 //    I.see();
 //    I.see();

@@ -1,21 +1,8 @@
-const { setHeadlessWhen } = require('@codeceptjs/configure');
-require('import-export');
-
-// turn on headless mode when running with HEADLESS=true environment variable
-// HEADLESS=true npx codecept run
-setHeadlessWhen(process.env.HEADLESS);
-
 exports.config = {
-  tests: './tests/*_test.js',
+  tests: './tests/*.test.js',
   output: './output',
-/* For running tests on multiple browsers, enable this block of code
-  multiple: {
-    smoke: {
-        browsers: ["chrome", "firefox"]
-    }
-  },*/
   helpers: {
-    Puppeteer: {
+    Puppeteer: { // Playwrite for cross-browser testing
       url: 'https://bluescapeqainterview.wordpress.com/',
       show: true,
       restart: false,
@@ -26,8 +13,8 @@ exports.config = {
     }
   },
   include: {
-    contactPage: './tests/pages/contactPage.js',
-    formSubmittedPage: './tests/pages/formSubmittedPage.js'
+    ContactPage: './pages/ContactPage.js',
+    FormSubmittedPage: './pages/FormSubmittedPage.js'
   },
   bootstrap: null,
   mocha: {},
