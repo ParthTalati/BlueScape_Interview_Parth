@@ -1,29 +1,32 @@
-// Feature('Form submitted successfully');
+const { I, ContactPage, FormSubmittedPage } = inject();
 
-// scenario('Go back button is available', (I) =>{
+Feature('Form submitted successfully');
 
-// });
+Before(async (I) => {
+    ContactPage.insertCorrectData();
+});
 
-// scenario('The url has contact-form-id=7 in params', (I) =>{
+Scenario('Message sent is visible', async() => {
+    I.seeElement(FormSubmittedPage.messageSentText);
 
-// });
+});
 
-// scenario('Message sent is visible', (I) =>{
+Scenario('Go back button is available', () => {
+    I.seeElement(FormSubmittedPage.goBackUrl);
 
-// });
+});
 
-// scenario('Website URL provided is clickable', (I) =>{
+Scenario('Website URL is clickable if provided',async () => {
+    if (I.seeElement(FormSubmittedPage.websiteSubmitted)) {
+        let webURL = await I.grabHTMLFrom(FormSubmittedPage.websiteSubmitted);
+        console.log(webURL);
+        I.clickLink(FormSubmittedPage.websiteSubmitted);
+        I.seeInCurrentUrl(webURL);
+    }
 
-// });
+});
 
-// scenario('correct details are displayed', (I) =>{
-
-// });
-
-// scenario('Go back is clickable', (I) =>{
-
-// });
-
-// scenario('Clicking go back loads /contact page', (I) =>{
-
-// });
+Scenario('Clicking go back loads /contact page',async () => {
+    FormSubmittedPage.clickGoBackUrl();
+    I.seeElementInDOM(ContactPage.nameField);
+});

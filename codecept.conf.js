@@ -6,7 +6,7 @@ exports.config = {
       url: 'https://bluescapeqainterview.wordpress.com/',
       show: true,
       restart: false,
-      windowSize: '1000x700',
+      windowSize: '1000x800',
       waitForNavigation: [ "domcontentloaded", "networkidle0" ],
       waitForAction: 500,
       waitForTimeout: 3000,
