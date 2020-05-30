@@ -3,6 +3,7 @@ const {I} = inject();
 class ContactPage {
     
     constructor() {
+        // Locators on the contact page
         this.nameField = 'input[id="g7-name"]';
         this.emailField = 'input[id="g7-email"]';
         this.websiteField = 'input[id="g7-website"]';
@@ -15,7 +16,7 @@ class ContactPage {
             xpath: "//li[contains(@class,'wp-social-link-instagram')]" 
         };
     }
-
+    // Function to insert the data in the fields, with default values assigned
     insertCorrectData(name = 'John', email = 'john@john.com', website = 'https://www.google.com') {
         I.amOnPage('contact');
         I.fillField(this.nameField, name);
@@ -25,7 +26,7 @@ class ContactPage {
         I.click(this.todaysDate);
         I.click("Submit", "button");
     }
-
+    // Function to click on Instagram svg image under social media section
     clickInstagramButton(){
         I.click(this.instagramButton);
     }

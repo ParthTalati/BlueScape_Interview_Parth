@@ -3,6 +3,8 @@ const { I } = inject();
 class FormSubmittedPage {
     
     constructor() {
+
+        // Locators for FormSubmitted page
         this.messageSentText = {
             xpath: "//h3[contains(text(),'Message Sent')]"
         };
@@ -20,6 +22,8 @@ class FormSubmittedPage {
         };
 
     }
+
+    //This method clicks go back url on the page
     clickGoBackUrl() {
         I.click(this.goBackUrl);
     }
