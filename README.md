@@ -8,13 +8,10 @@ This repository contains the Test-suite for given /contacts web-page on "BlueSca
 
 #### 1. Technologies Used:
 
-codeceptjs
-
-puppeteer
-
-JS
-
-Page Object Model (POM)
+###### codeceptjs
+###### puppeteer
+###### JS
+###### Page Object Model (POM)
 
 #### 2. Steps:
 
@@ -22,5 +19,5 @@ Page Object Model (POM)
 2. Install **Docker**
 3. Clone the git repository https://github.com/ParthTalati/BlueScape_Interview_Parth
 4. **CD** into the directory where repository is cloned
-5. Run "***make build***" in terminal
-6. Run "***make test***" in terminal
+5. Run **make build** in terminal
+6. Run **make test** in terminal
