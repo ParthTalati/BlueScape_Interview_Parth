@@ -10,6 +10,9 @@ exports.config = {
       waitForNavigation: [ "domcontentloaded", "networkidle0" ],
       waitForAction: 500,
       waitForTimeout: 3000,
+      chrome: {
+        "args": [ "--headless", "--no-sandbox" ]
+      }
     }
   },
   include: {
