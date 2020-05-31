@@ -8,5 +8,4 @@ RUN npm install
 
 COPY . /app
 
-RUN npx codeceptjs run --steps
 

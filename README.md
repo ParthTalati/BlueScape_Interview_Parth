@@ -21,4 +21,5 @@ Page Object Model (POM)
 1. Download Docker
 2. Install Docker
 3. Clone the git repository https://github.com/ParthTalati/BlueScape_Interview_Parth
-4. Run docker build .
+4. Run "make build" in terminal
+5. Run "make test" in terminal
