@@ -2,12 +2,23 @@
 
 # BlueScape_Interview_Parth:
 
-Code for testing the contact page for interview website
+## About the Project:
 
-Initialize:  npm init -y
+This repository contains the Test-suite for given web-pages on "BlueScape Website".
 
-Install:  npm install codeceptjs puppeteer --save-dev
+## 1. Technologies Used:
 
-Initialize codeceptjs: npx codeceptjs init
+codeceptjs
 
- Install import-export modules: Npm i import-export —save
+puppeteer
+
+JS
+
+Page Object Model (POM)
+
+## 2. Steps:
+
+1. Download Docker
+2. Install Docker
+3. Clone the git repository https://github.com/ParthTalati/BlueScape_Interview_Parth
+4. Run docker build .
